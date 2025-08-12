@@ -37,6 +37,9 @@ python appsch.py
 
 doctor-appointment-scheduler/
 │
+
 ├── main.py              # Main application script
+
 ├── requirements.txt     # Dependencies list
+
 └── README.md            # Project documentation
