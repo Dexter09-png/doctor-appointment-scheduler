@@ -1,6 +1,6 @@
 #Doctor Appointment Scheduler
 
-A Python Tkinter-based Appointment Scheduling System integrated with MongoDB to perform complete CRUD operations. The application allows users to efficiently add, view, update, and delete appointment records through an intuitive graphical interface.
+A Python Tkinter-based application integrated with MongoDB to perform full CRUD operations for managing doctor appointments. Users can add, view, update, and delete appointment records via a simple, user-friendly graphical interface. Built with Python, Tkinter, and PyMongo for efficient data management and storage.
 
 #Features
 
