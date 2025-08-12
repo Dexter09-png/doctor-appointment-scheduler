@@ -17,10 +17,10 @@ It allows users to manage doctor appointments efficiently by providing complete 
 4. Database Connector: PyMongo
 
 #Installation & Setup
-Install MongoDB
+1. Install MongoDB
 Make sure MongoDB is installed and running on your system.
 
-#Install Python Dependencies
+2. Install Python Dependencies
 Open a terminal and run:
 pip install pymongo tkcalendar
 
