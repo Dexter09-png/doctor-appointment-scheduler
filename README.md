@@ -25,7 +25,7 @@ It allows users to manage doctor appointments efficiently by providing complete 
 pip install pymongo tkcalendar
 
 #Run the Application
-Navigate to the project folder and run:
+*Navigate to the project folder and run:
 python appsch.py
 
 #How It Works
