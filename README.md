@@ -34,11 +34,13 @@ python appsch.py
 3. The system performs insert, read, update, and delete operations directly on the MongoDB database.
 
 #Screenshots
+
 <img width="1919" height="928" alt="Image" src="https://github.com/user-attachments/assets/4146bdd9-d96c-4422-811c-df3417fcef3d" />
 
 #Project Structure
 
 doctor-appointment-scheduler/
+
 │
 
 ├── main.py              # Main application script
