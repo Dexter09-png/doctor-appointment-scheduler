@@ -37,6 +37,8 @@ python appsch.py
 
 <img width="1919" height="928" alt="Image" src="https://github.com/user-attachments/assets/4146bdd9-d96c-4422-811c-df3417fcef3d" />
 
+<img width="1400" height="496" alt="Image" src="https://github.com/user-attachments/assets/8ca0c0e2-2e73-49a6-aca6-6a32c7e16c7f" />
+
 #Project Structure
 
 doctor-appointment-scheduler/
