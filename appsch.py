@@ -5,7 +5,7 @@ from pymongo import MongoClient
 from datetime import datetime
 import uuid
 
-# ------------------ DB Setup ------------------
+#DB Setup
 def get_db_collection(uri="mongodb://localhost:27017/",
                       db_name="appointment_db", coll_name="appointments"):
     client = MongoClient(uri)
@@ -14,7 +14,7 @@ def get_db_collection(uri="mongodb://localhost:27017/",
 
 collection = get_db_collection()
 
-# ------------------ Helpers ------------------
+#Helpers
 def validate_time(t):
     try:
         return datetime.strptime(t, "%H:%M").time()   # 24-hour HH:MM
@@ -24,7 +24,7 @@ def validate_time(t):
 def make_uid():
     return str(uuid.uuid4())[:8]   # short unique id
 
-# ------------------ CRUD ------------------
+#CRUD
 def add_appointment():
     name = ent_name.get().strip()
     date_str = ent_date.get_date().strftime("%Y-%m-%d")
@@ -138,12 +138,12 @@ def on_tree_select(event):
     ent_purpose.delete(0, tk.END); ent_purpose.insert(0, doc.get("purpose",""))
     status_var.set(doc.get("status","Scheduled"))
 
-# ------------------ UI ------------------
+#UI
 root = tk.Tk()
 root.title("🩺 Doctor Appointment Scheduler")
 root.state('zoomed')  # maximize window
 
-# Colors
+#Colors
 BG_COLOR = "#F5F5DC"
 BTN_BG = "#D35400"
 BTN_FG = "white"
@@ -161,27 +161,27 @@ form.pack(side=tk.LEFT, fill=tk.Y, padx=(0,12))
 
 lbl = lambda parent, txt: tk.Label(parent, text=txt, anchor="w", bg=BG_COLOR, font=("Helvetica", 11))
 
-# Patient Name
+#Patient Name
 lbl(form, "Patient Name:").grid(row=0, column=0, sticky="w", pady=(6,0))
 ent_name = tk.Entry(form, width=28)
 ent_name.grid(row=0, column=1, pady=(6,0), padx=6)
 
-# Date
+#Date
 lbl(form, "Date:").grid(row=1, column=0, sticky="w", pady=(6,0))
 ent_date = DateEntry(form, width=16, background='darkblue', foreground='white', borderwidth=2, date_pattern='yyyy-mm-dd')
 ent_date.grid(row=1, column=1, pady=(6,0), sticky="w", padx=6)
 
-# Time
+#Time
 lbl(form, "Time (HH:MM 24h):").grid(row=2, column=0, sticky="w", pady=(6,0))
 ent_time = tk.Entry(form, width=16)
 ent_time.grid(row=2, column=1, pady=(6,0), sticky="w", padx=6)
 
-# Reason for Visit
+#Reason for Visit
 lbl(form, "Purpose:").grid(row=3, column=0, sticky="w", pady=(6,0))
 ent_purpose = tk.Entry(form, width=40)
 ent_purpose.grid(row=3, column=1, pady=(6,0), padx=6)
 
-# Status
+#Status
 lbl(form, "Status:").grid(row=4, column=0, sticky="w", pady=(8,0))
 status_var = tk.StringVar(value="Scheduled")
 status_menu = ttk.Combobox(form, textvariable=status_var, values=["Scheduled", "Completed", "Cancelled"], state="readonly", width=14)
@@ -250,3 +250,4 @@ ent_date.set_date(datetime.today())
 display_all()
 
 root.mainloop()
+
